@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+<body>
+    <header>
+        <a href="carrinho.html" class="botao-voltar">
+            <span>&#8592;</span>
+            <span>Voltar</span>
+        </a>
+        <h1>Finalizar Compra</h1>
+    </header>
+
+    <main>
+        <div class="pagamento-container">
+            <div class="informacoes-compra">
+                <h2>Resumo da Compra</h2>
+                <p id="nomeProduto">Produto: </p>
+                <p id="valorProduto">Total: </p>
+            </div>
+
+            <div class="pix-code-container">
+    <textarea id="pixKey" readonly>Chave PIX exemplo: 123456789@banco.com</textarea>
+    <button onclick="copiarChave()">Copiar Código PIX</button>
+    <!-- Contagem regressiva escondida inicialmente -->
+    <div id="contagemRegressiva" class="contagem-regressiva">1 hora, 40 minutos e 0 segundo(s)</div>
+</div>
+        </div>
+    </main>
+
+    <script src="pagamento.js"></script>
+</body>
+</html>

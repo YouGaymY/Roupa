@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo adicional */
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        /* Cabeçalho */
+        .register-header {
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            justify-content: center; /* Centraliza o título */
+        }
+
+        /* Botão de Voltar */
+        .back-button {
+            position: absolute;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Título 'Cadastrar' */
+        .register-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            flex-grow: 1;
+            margin-left: 55px; /* Mover 10px para o lado direito */
+        }
+
+        /* Fundo branco com o formulário */
+        .register-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+            margin-top: 80px; /* Espaço para não cobrir o cabeçalho */
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Botão de Cadastrar */
+        .register-button {
+            width: 100%;
+            padding: 10px;
+            background-color: black; /* Alterado para preto */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .register-button:active {
+            transform: scale(0.95);
+        }
+
+        /* Erro de mensagem */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="register-header">
+        <!-- Botão de Voltar -->
+        <a href="login.html" class="back-button">&#8592; Voltar</a>
+        <!-- Título 'Cadastrar' centralizado com margem para o lado direito -->
+        <div class="register-title">Cadastrar</div>
+    </header>
+
+    <!-- Fundo branco com o formulário -->
+    <section class="register-container">
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Escolha um nome de usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Escolha uma senha" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit" class="register-button">Cadastrar</button>
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Verifica se as senhas são iguais
+            if (password === confirmPassword) {
+                // Armazena no localStorage
+                localStorage.setItem(username, password);
+                alert('Cadastro realizado com sucesso!');
+                // Redireciona para a página de login
+                window.location.href = 'login.html';
+            } else {
+                const errorMessage = document.getElementById('errorMessage');
+                errorMessage.textContent = 'As senhas não coincidem. Tente novamente.';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000; /* Cabeçalho preto */
+    color: #fff; /* Texto branco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o título do cabeçalho */
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para o botão de voltar */
+.botao-voltar {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px; /* Tamanho do texto menor */
+    padding: 10px 15px;
+    color: #000; /* Texto preto */
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #000; /* Borda preta */
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.botao-voltar:hover {
+    background-color: #f0f0f0; /* Fundo levemente cinza quando passa o mouse */
+}
+
+.botao-voltar:focus {
+    outline: none; /* Remove a borda de foco */
+}
+/* Container do pagamento */
+.pagamento-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* Resumo da compra */
+.informacoes-compra {
+    background-color: #333; /* Fundo cinza */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Texto branco */
+}
+
+/* QR Code */
+.qr-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.qr-container p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Campo de chave Pix */
+textarea {
+    background-color: #333; /* Cor de fundo cinza */
+    color: #fff;
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 85%;
+    font-size: 20px; /* Tamanho da fonte */
+    resize: none; /* Impede redimensionamento manual */
+    overflow: hidden; /* Oculta barras de rolagem */
+    text-align: center; /* Centraliza o texto */
+    line-height: 1.5; /* Melhora o espaçamento */
+    padding-left: 20px; /* Espaço à esquerda */
+    padding-right: 20px; /* Espaço à direita */
+}
+
+/* Estilo do botão de copiar */
+.pix-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333; /* Fundo cinza escuro */
+    color: #fff; /* Texto branco */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pix-code-container button {
+    background-color: #4CAF50; /* Cor verde */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pix-code-container button:hover {
+    background-color: #45a049;
+}
+/* Estilo do botão de copiar */
+.pix-code-container button {
+    background-color: #4CAF50; /* Cor verde */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pix-code-container button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para a contagem regressiva */
+.contagem-regressiva {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    display: none; /* Começa escondida */
+}

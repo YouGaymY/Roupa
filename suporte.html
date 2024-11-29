@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte</title>
+    <link rel="stylesheet" href="suporte.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.ibb.co/6YbR4gc/Photoroom-20241128-202723.png" alt="Logo" class="logo">
+        <h1>Suporte</h1>
+        <!-- Substituição do botão Home por imagem clicável -->
+        <a href="index.html" class="home-link">
+            <img src="https://i.ibb.co/ZHFsxcJ/IMG-20241128-WA0075-removebg-preview.png" alt="Home" class="home-image">
+        </a>
+    </div>
+    
+    <div class="chat-container">
+        <!-- Perguntas frequentes no topo do chat -->
+        <div class="faq-container">
+            <div class="faq-question" onclick="askQuestion('Preciso de ajuda com o pedido', 'Caso não consiga fazer o pedido, fale com o suporte')">
+                Preciso de ajuda com o pedido
+            </div>
+            <div class="faq-question" onclick="askQuestion('Como posso comprar?', 'Você pode comprar diretamente pelo nosso site.')">
+                Como posso comprar?
+            </div>
+            <div class="faq-question" onclick="askQuestion('Quais são os métodos de pagamento?', 'Para novos clientes o método de pagamento é via pix')">
+                Quais são os métodos de pagamento?
+            </div>
+            <div class="faq-question" onclick="askQuestion('Estou com problemas com o meu pedido', 'Verifique se preencheu o endereço corretamente, caso esteja correto, você pode pedir reembolso.')">
+                Problemas com o pedido
+            </div>
+            <div class="faq-question" onclick="askQuestion('Eu quero reembolsar o valor gasto no site', 'Lembre-se, para pedir reembolso você tem que ter comprado algum produto. Deixe sua chave pix abaixo para o reembolso. Após avaliar o problema, retornaremos o valor imediatamente.')">
+                Reembolsar valor gasto no site
+            </div>
+        </div>
+
+        <div id="chat-box">
+            <!-- Mensagens de perguntas e respostas vão aparecer aqui dentro -->
+        </div>
+
+        <div class="chat-input-container">
+            <!-- Agora os campos não estão desabilitados -->
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <script src="suporte.js"></script>
+</body>
+</html>

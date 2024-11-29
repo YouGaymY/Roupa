@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="stylesheet" href="endereco.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.ibb.co/QXdq7nn/c11ce6b714d8aaed20161a13d4f59fbc-removebg-preview.png" alt="Logo" class="logo">
+        <h1>Endereço</h1>
+        <a href="index.html" class="home-link">
+            <img src="https://i.ibb.co/ZHFsxcJ/IMG-20241128-WA0075-removebg-preview.png" alt="Home" class="home-image">
+        </a>
+    </div>
+
+    <div class="form-container">
+        <h2>Cadastro para Entrega</h2>
+        <form id="address-form">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" placeholder="Digite seu nome" required>
+
+            <label for="product">Nome do Produto</label>
+            <input type="text" id="product" placeholder="Digite o nome do produto" required>
+
+            <label for="address">Endereço</label>
+            <input type="text" id="address" placeholder="Digite seu endereço" required>
+
+            <label for="zip">CEP</label>
+            <input type="text" id="zip" placeholder="Digite o CEP" required>
+
+            <label for="state">Estado</label>
+            <input type="text" id="state" placeholder="Digite o estado" required>
+
+            <button type="button" id="submit-button">Enviar</button>
+        </form>
+        <div id="confirmation-container" style="display: none;"></div>
+    </div>
+
+    <script src="endereco.js"></script>
+</body>
+</html>
